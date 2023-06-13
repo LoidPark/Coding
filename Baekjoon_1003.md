@@ -30,7 +30,7 @@ end = time.time()
 
 print(f"{end - start:.5f} sec")
 ```
-+ 2. 대충 아는 수열이니 풀어서 구현한다
+2) 대충 아는 수열이니 풀어서 구현한다
 + 메모리 31256KB, 시간 44ms, 코드 길이 286B
 ```python
 aaa = []
