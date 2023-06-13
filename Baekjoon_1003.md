@@ -51,3 +51,22 @@ for j in aaa:
     else:
         print(res[j-2], res[j-1])
 ```
+3) 다이나믹 프로그래밍 적용
++ fibo(n-1)이나 fibo(n)이나 어차피 계산은 중복이다
++ 동적 계획법 중 bottom-up으로 작은 문제부터 풀고 모아서 큰 문제를 해결한다
++ 메모이제이션(Memoization)을 활용한다. 미리 계산해 배열로 저장해두고 꺼내 쓴다
++ 메모리, 시간 동일, 코드 길이 256B (조금 줄었다)
+```python
+aaa = []
+n = int(input())
+for i in range(n):
+    a = int(input())
+    aaa.append(a)
+for j in aaa:
+    dp = [0, 1]
+    def fibo(j):
+        for i in range(2, j+1):
+            dp.append(dp[i-1]+dp[i-2])
+        return dp
+    print(fibo(j)[j-1], fibo(j)[j])
+```
