@@ -1,7 +1,7 @@
 ## Baekjoon_1003번 피보나치
 1) 재귀로 풀어 본다
 + local variable 'result2' referenced before assignment 이런 문구가 뜨면, 전역변수를 지역변수로 호출했기 때문에 발생한 문제다
- → global 변수명을 추가해서 해결한다
+-> → global 변수명을 추가해서 해결한다
 + 시간 초과됨. 3개 구하는데 무려 4.8sec
 ```python
 start = time.time()
